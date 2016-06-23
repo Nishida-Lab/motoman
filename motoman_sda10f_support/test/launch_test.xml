@@ -45,7 +45,6 @@
     <group ns="dx100" >
 	  <include file="$(find motoman_sda10f_support)/launch/robot_interface_streaming_sda10f.launch">
 		<arg name="robot_ip"   value="$(arg robot_ip)" />
-		<arg name="version0" value="$(arg version0)" />
         <arg name="controller" value="$(arg dx100)"/>
 	  </include>
     </group>
@@ -53,7 +52,6 @@
     <group ns="fs100" >
 	  <include file="$(find motoman_sda10f_support)/launch/robot_interface_streaming_sda10f.launch">
 		<arg name="robot_ip"   value="$(arg robot_ip)" />
-		<arg name="version0" value="$(arg version0)" />
         <arg name="controller" value="$(arg fs100)"/>
 	  </include>
     </group>

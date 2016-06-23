@@ -5,7 +5,7 @@
   Usage Instructions:
 
   1. Add the following to your CMakeLists.txt:
-    
+
     find_package(roslaunch)
     roslaunch_add_file_check(test/launch_test.xml)
 
@@ -27,7 +27,8 @@
   testing multpile launch files
 -->
 <launch>
-	<arg name="req_arg" value="default"/>
+  <arg name="robot_ip" value="default"/>
+  <arg name="version0" value="true"/>
   <arg name="dx100" value="dx100"/>
   <arg name="fs100" value="fs100" />
 
@@ -42,31 +43,32 @@
 
   <group ns="robot_interface_streaming_sda10f">
     <group ns="dx100" >
-	    <include file="$(find motoman_sda10f_support)/launch/robot_interface_streaming_sda10f.launch">
-		    <arg name="robot_ip"   value="$(arg req_arg)" />
-        <arg name="controller" value="$(arg dx100)"/>
+      <include file="$(find motoman_sda10f_support)/launch/robot_interface_streaming_sda10f.launch">
+        <arg name="robot_ip"   value="$(arg robot_ip)" />
+        <arg name="version0" value="$(arg version0)" />
 	    </include>
     </group>
 
     <group ns="fs100" >
-	    <include file="$(find motoman_sda10f_support)/launch/robot_interface_streaming_sda10f.launch">
-		    <arg name="robot_ip"   value="$(arg req_arg)" />
+      <include file="$(find motoman_sda10f_support)/launch/robot_interface_streaming_sda10f.launch">
+        <arg name="robot_ip"   value="$(arg robot_ip)" />
+        <arg name="version0" value="$(arg version0)" />
         <arg name="controller" value="$(arg fs100)"/>
-	    </include>
+      </include>
     </group>
   </group>
 
   <group ns="robot_state_visualize_sda10f">
     <group ns="dx100" >
-	    <include file="$(find motoman_sda10f_support)/launch/robot_state_visualize_sda10f.launch">
-		    <arg name="robot_ip"   value="$(arg req_arg)" />
+      <include file="$(find motoman_sda10f_support)/launch/robot_state_visualize_sda10f.launch">
+        <arg name="robot_ip"   value="$(arg robot_ip)" />
         <arg name="controller" value="$(arg dx100)"/>
 	    </include>
     </group>
 
     <group ns="fs100" >
-	    <include file="$(find motoman_sda10f_support)/launch/robot_state_visualize_sda10f.launch">
-		    <arg name="robot_ip"   value="$(arg req_arg)" />
+      <include file="$(find motoman_sda10f_support)/launch/robot_state_visualize_sda10f.launch">
+        <arg name="robot_ip"   value="$(arg robot_ip)" />
         <arg name="controller" value="$(arg fs100)"/>
 	    </include>
     </group>

@@ -1,6 +1,7 @@
 # Motoman
 
-[![Build Status](http://build.ros.org/job/Idev__motoman__ubuntu_trusty_amd64/badge/icon)](http://build.ros.org/job/Idev__motoman__ubuntu_trusty_amd64)
+Nishida-Lab Travis : [![Build Status](https://travis-ci.org/Nishida-Lab/motoman.svg?branch=master)](https://travis-ci.org/Nishida-Lab/motoman)  
+ROS-Industrial motoman Jenkins : [![Build Status](http://build.ros.org/job/Idev__motoman__ubuntu_trusty_amd64/badge/icon)](http://build.ros.org/job/Idev__motoman__ubuntu_trusty_amd64)  
 
 [ROS-Industrial][] Motoman metapackage. See the [ROS wiki][] page for more information.
 

@@ -27,7 +27,7 @@
   testing multpile launch files
 -->
 <launch>
-  <arg name="robot_ip" value="default"/>
+  <arg name="robot_ip" value="localhost"/>
   <arg name="version0" value="true"/>
   <arg name="dx100" value="dx100"/>
   <arg name="fs100" value="fs100" />
